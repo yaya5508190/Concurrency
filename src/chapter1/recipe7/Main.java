@@ -16,12 +16,6 @@ public class Main {
             thread.start();
         }
 
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         CleanerTask cleanerTask = new CleanerTask(deque);
         cleanerTask.start();
     }

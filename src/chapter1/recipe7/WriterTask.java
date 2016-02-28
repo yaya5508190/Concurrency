@@ -20,7 +20,7 @@ public class WriterTask implements Runnable {
             Event event = new Event();
             event.setDate(new Date());
             event.setEvent(String.format("The thread %s has generated an event", Thread.currentThread().getId()));
-            System.out.printf("%s  %s\n",event.getDate().toString(),event.getEvent());
+            //System.out.printf("%d\n",deque.size());
             deque.addFirst(event);
             try {
                 TimeUnit.SECONDS.sleep(1);
